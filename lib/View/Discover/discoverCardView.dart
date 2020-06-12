@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:raudio_app/Model/MockData/mockUserData.dart';
-import 'package:raudio_app/Controller/Messages/messagesController.dart';
+import 'playPauseButtonView.dart';
+import 'package:raudio_app/Controller/Discover/discoverCardController.dart';
 
-class Messages extends StatefulWidget {
+class DiscoverList extends StatefulWidget {
   @override
-  _MessagesState createState() => _MessagesState();
+  _DiscoverListState createState() => _DiscoverListState();
 }
 
-class _MessagesState extends State<Messages> {
+class _DiscoverListState extends State<DiscoverList> {
+  DiscoverCardController con = DiscoverCardController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    MessagesController con = MessagesController();
     return ListView(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
@@ -31,16 +37,16 @@ class _MessagesState extends State<Messages> {
                 style: TextStyle(color: Colors.white, fontSize: 22),
               ),
               Text(
-                con.distance(index),
+                con.distance(index) + ' km', //TODO: Future Builder
                 style: TextStyle(color: Colors.grey, fontSize: 12),
               ),
             ],
           ),
           subtitle: Text(
-            con.lastText(index),
+            con.nowPlayingId(index),
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
-          //trailing: Icon(Icons.play_circle_filled, color: Colors.white, size: 44),
+          trailing: PlayPauseButton(con.nowPlayingUri(index)),
         );
       }),
     );

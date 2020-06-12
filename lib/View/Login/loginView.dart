@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:raudio_app/Controller/Login/loginController.dart';
 
 class LoginView extends StatelessWidget {
   @override
@@ -41,11 +42,12 @@ class LoginView extends StatelessWidget {
 }
 
 class ConnectButton extends StatelessWidget {
+  LoginController con = LoginController();
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: () {
-        Navigator.pushReplacementNamed(context, 'spotify');
+        con.connectButtonGotPressed(context);
       },
       child: Stack(
         alignment: Alignment.center,

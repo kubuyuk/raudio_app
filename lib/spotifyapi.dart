@@ -141,7 +141,7 @@ class Spotify {
     return WebView(
       javascriptMode: JavascriptMode.unrestricted,
       initialUrl:
-          'https://accounts.spotify.com/authorize?show_dialog=true&client_id=3a5d96339141402684c63b406b673497&response_type=code&redirect_uri=raudio-login://callback&scope=user-read-private%20user-read-email%20user-read-currently-playing%20user-read-playback-state%20user-modify-playback-state',
+          'https://accounts.spotify.com/authorize?show_dialog=false&client_id=3a5d96339141402684c63b406b673497&response_type=code&redirect_uri=raudio-login://callback&scope=user-read-private%20user-read-email%20user-read-currently-playing%20user-read-playback-state%20user-modify-playback-state',
       onWebViewCreated: (WebViewController webViewController) {
         _controller = webViewController;
       },
