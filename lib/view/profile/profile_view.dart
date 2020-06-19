@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:raudio_app/controller/profile/profile_controller.dart';
+
+class ProfileScreen extends StatelessWidget {
+  final int userID;
+  ProfileController con;
+
+  ProfileScreen({Key key, @required this.userID}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    con = ProfileController(userID);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(con.name()),
+      ),
+      body: Image.asset(con.ppURL()),
+    );
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183172955912",
+    "firebase_url": "https://raudio-9ad07.firebaseio.com",
+    "project_id": "raudio-9ad07",
+    "storage_bucket": "raudio-9ad07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183172955912:android:def7e0a6adb08bbdc5f6bd",
+        "android_client_info": {
+          "package_name": "com.example.raudioapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183172955912-finj20d2e8uhh74jh1ogo7kmj0g9s7v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrmqPwtnhTbjhWIkWgprnCVGnQvj9q47c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183172955912-finj20d2e8uhh74jh1ogo7kmj0g9s7v7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
