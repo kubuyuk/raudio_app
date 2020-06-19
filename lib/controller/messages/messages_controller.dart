@@ -1,7 +1,7 @@
 import 'package:raudio_app/view/messages/chat_view.dart';
 import 'package:flutter/material.dart';
-import 'package:raudio_app/model/mock_data/mock_user_data.dart';
-import 'package:raudio_app/model/constants/constants.dart';
+import 'package:raudio_app/model/mock_user_data.dart';
+import 'package:raudio_app/model/constants.dart';
 
 class MessagesController {
   void TileTapped(context, index) {

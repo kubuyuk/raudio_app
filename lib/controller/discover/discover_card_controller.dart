@@ -1,8 +1,8 @@
 import 'package:raudio_app/model/classes/User.dart';
-import 'package:raudio_app/model/mock_data/mock_user_data.dart';
+import 'package:raudio_app/model/mock_user_data.dart';
 import 'package:flutter/material.dart';
 import 'package:raudio_app/View/Profile/profile_view.dart';
-import 'package:raudio_app/model/constants/constants.dart';
+import 'package:raudio_app/model/constants.dart';
 import 'package:raudio_app/controller/services/location_brain.dart';
 
 class DiscoverCardController {

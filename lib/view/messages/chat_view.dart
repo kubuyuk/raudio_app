@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:raudio_app/model/constants.dart';
+import 'package:raudio_app/controller/messages/chat_controller.dart';
 
 final firestore = Firestore.instance;
 
@@ -12,12 +14,15 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
+  ChatController con = ChatController();
   String messageText;
+  String userName;
   @override
   Widget build(BuildContext context) {
+    userName = con.name(userID: widget.userUri);
     return Scaffold(
       appBar: AppBar(
-        title: Text('user name: ${widget.userUri}'),
+        title: Text('user name: $userName'),
       ),
       body: SafeArea(
         child: Column(
@@ -40,12 +45,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       onChanged: (value) {
                         messageText = value;
                       },
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 20.0),
-                        hintText: 'Type your message here...',
-                        border: InputBorder.none,
-                      ),
+                      decoration: kTextFieldInputDecoration,
                     ),
                   ),
                   FlatButton(

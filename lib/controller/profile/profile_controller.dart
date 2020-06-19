@@ -1,4 +1,4 @@
-import 'package:raudio_app/model/mock_data/mock_user_data.dart';
+import 'file:///C:/Users/Admin/AndroidStudioProjects/raudio_app/lib/model/mock_user_data.dart';
 
 class ProfileController {
   int userUri;

@@ -1,11 +1,9 @@
 import 'package:raudio_app/controller/services/spotify_brain.dart';
 import 'dart:async';
-import 'package:raudio_app/model/classes/Song.dart';
 
 class ListeningNowController {
   String _error; //TODO: manage API errors
   Timer sliderChangeTimer;
-  Song currentlyPlaying;
   bool _isSliderSelected = false;
   bool isPlaying;
 
