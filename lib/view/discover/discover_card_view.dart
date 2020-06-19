@@ -23,7 +23,7 @@ class _DiscoverListState extends State<DiscoverList> {
       children: List<Widget>.generate(con.getLength(), (index) {
         return ListTile(
           onTap: () {
-            con.TileTapped(context, index);
+            con.tileTapped(context, index);
           },
           leading: CircleAvatar(
             backgroundImage: AssetImage(con.image(index)),

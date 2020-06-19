@@ -28,12 +28,11 @@ class Spotify {
         });
     print(response.statusCode);
     if (response.statusCode == 200) {
-      //TODO: catch other status codes, too.
       _playerData = response.body;
       playerData = _playerData; //TODO: don't use a global var in the future
       print(currentlyPlayingUri());
       return response.body;
-    }
+    } //TODO: catch other status codes, too.
   }
 
   Future<void> playUri(String uri) async {
@@ -190,7 +189,7 @@ class Spotify {
 
   Future<String> requestToken() async {
     http.Response response = await http.post(
-        'https://accounts.spotify.com/api/token?grant_type=authorization_code&code=${_code}&redirect_uri=raudio-login://callback',
+        'https://accounts.spotify.com/api/token?grant_type=authorization_code&code=$_code&redirect_uri=raudio-login://callback',
         headers: {
           'Authorization':
               'Basic M2E1ZDk2MzM5MTQxNDAyNjg0YzYzYjQwNmI2NzM0OTc6ZWQxZWRlOWQxYjVmNDgwM2JmNzk4YTc0Zjg2NDIwOTg=',

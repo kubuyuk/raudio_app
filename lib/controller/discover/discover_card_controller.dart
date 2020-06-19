@@ -36,7 +36,7 @@ class DiscoverCardController {
         .ppURL; //TODO: Instead of Mock data implement Firebase
   }
 
-  void TileTapped(context, index) {
+  void tileTapped(context, index) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => ProfileScreen(userID: index)),

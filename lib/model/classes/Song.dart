@@ -1,6 +1,6 @@
 class Song {
-  int progress_ms;
-  int duration_ms;
+  int progressMs;
+  int durationMs;
   bool isPlaying;
   String uri;
   String name;
@@ -8,8 +8,8 @@ class Song {
   String image;
 
   Song(
-      {this.progress_ms,
-      this.duration_ms,
+      {this.progressMs,
+      this.durationMs,
       this.isPlaying,
       this.uri,
       this.name,
